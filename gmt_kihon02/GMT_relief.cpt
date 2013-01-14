@@ -1,0 +1,13 @@
+#	$Id: GMT_relief.cpt,v 1.1 2001/09/23 23:11:20 pwessel Exp $
+#
+# Colortable for whole earth relief used in Wessel topomaps
+# Designed by P. Wessel and F. Martinez, SOEST
+# COLOR_MODEL = RGB
+0	70	120	50	500	120	100	50
+500	120	100	50	1000	146	126	60
+1000	146	126	60	2000	198	178	80
+2000	198	178	80	3000	250	230	100
+3000	250	230	100	4000	250	234	126
+F	255	255	255				
+B	0	0	0
+N	255	255	255
