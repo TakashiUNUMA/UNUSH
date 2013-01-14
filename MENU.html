@@ -1,0 +1,625 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<font face="MS ゴシック" size="3">
+<center>
+<font color="#ff0000">2012/06/04 Update</font>
+</center>
+
+<hr>
+<center>
+<b>誰でも簡単！「UNUSH」</b>
+<br>
+更新情報は<a href="./README" target="_blank">こちら</a>
+<br>
+<br>
+</center>
+
+<!-- sh変数の基本 ----------------------------------------------->
+<b><u>変数</u></b>(簡単)
+<ul>
+<li>
+shで使用する変数の基本<br>
+hensuu/hensuu.sh<br>
+<a href="DEVEL/txt/hensuu.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<br>
+<!-- DO LOOP ---------------------------------------------------->
+<b><u>LOOP文</u></b>(簡単)
+<ul>
+<li>
+DO LOOP(スクリプト内で指定するバージョン)<br>
+loop01/loop01.sh<br>
+<a href="DEVEL/txt/loop01.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+DO LOOP(外部ファイルを指定するバージョン)<br>
+loop02/loop02.sh<br>
+<a href="DEVEL/txt/loop02.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+DO LOOP(C言語風のDO LOOP)<br>
+loop03/loop03.sh<br>
+<a href="DEVEL/txt/loop03.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<br>
+<!-- IF --------------------------------------------------------->
+<b><u>IF文</u></b>(簡単)
+<ul>
+<li>
+IF文(数値の判定)<br>
+if01/if01.sh<br>
+<a href="DEVEL/txt/if01.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+IF文(文字列の判定)<br>
+if02/if02.sh<br>
+<a href="DEVEL/txt/if02.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<br>
+<!-- 日時処理プログラム ----------------------------------------->
+<b><u>日時処理プログラム</u></b>(LOOPやIFを応用)
+<ul>
+<li>
+UTC時刻をJST時刻に変換 <font color="#ff0000">[New!]</font><br>
+date_routine/utc2jst.sh<br>
+<a href="DEVEL/txt/utc2jst.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+JST時刻をUTC時刻に変換 <font color="#ff0000">[New!]</font><br>
+date_routine/jst2utc.sh<br>
+<a href="DEVEL/txt/jst2utc.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+</ul>
+
+
+<br>
+<!-- GrADSで描画 ------------------------------------------------>
+<b><u>GrADSで描画</u></b>(shとgrads-scriptの合わせ技)</font><br>
+必要なファイルは<a href="http://kodama.fubuki.info/wiki/wiki.cgi/GrADS/script?lang=jp" target="_blank">こちら(JAMSTEC小玉さんHP)</a><br>
+<ul>
+
+<li>
+サンプルデータ：<br>
+grads/data/<a href="grads/data/test.nc" target="_blank">test.nc</a>
+</li>
+<br>
+
+<li>
+変数を描く <font color="#ff0000">[New!]</font><br>
+<ul>
+九州大学の山崎哲さんから、x軸及びy軸の詳細設定について教えていただき、本プログラムに組み込みました。<br>
+この場を借りてお礼申し上げます。<br>
+さらに今回、任意断面が描けるように改良しました。<br>
+任意断面の描画には、<a href="http://wind.geophys.tohoku.ac.jp/~sakai/lab/grads_script/index.html" target="_blank">境剛志さんのHP</a>にある、「anyver.gs」を改良したものを使用します。<br>
+grads/scripts ディレクトリ内にありますのでご自分の "GASCRP" に設定しているディレクトリに置いておくと良いです。
+</ul>
+grads/gradsdraw.sh<br>
+<a href="DEVEL/txt/gradsdraw.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+
+<li>
+全国合成レーダー用ツール: <a href="http://shimizus.hustle.ne.jp/wiki/wiki.cgi?action=ATTACH&page=%A5%EC%A1%BC%A5%C0%B4%D8%CF%A2%A5%E1%A5%E2&file=read%5Fjmaradar%2Etar%2Ez" target="_blank">read_jmaradar.tar.z(防災科研,清水さんのプログラムを使用)</a><br>
+</li>
+<br>
+
+<li>
+気象庁1kmメッシュ全国合成レーダーを描く(2005年6月以降):<br>
+grads/gd2grads.sh<br>
+<a href="DEVEL/txt/gd2grads.txt" target="_blank">説明書</a><br>
+使用時は、上記の jmaradar2bin を併用します。<br>
+</li>
+<br>
+
+<li>
+JMA-MSM解析ツール(2006年3月以降):<br>
+MANIAC/model_analysis/msm_grib22bin.sh<br>
+<a href="DEVEL/txt/msm_grib22bin.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+JMA-MSM描画ツール(2006年3月以降):<br>
+MANIAC/model_analysis/msmg2_bin2grads.sh<br>
+<a href="DEVEL/txt/msmg2_bin2grads.txt" target="_blank">説明書</a><br>
+<font color="#ff0000"><b>[重要]</b></font>使用時は、上記の msm_grib22bin.sh を併用します。
+</li>
+
+
+<br>
+<b>GrADS Script が紹介してある HP</b>(オススメ)<br>
+<ul>
+<li>
+<a href="http://mc39.genin.jp/" target="_blank">GrADS用「私」作ユーティリティ</a><br>
+</li>
+<li>
+<a href="http://kodama.fubuki.info/wiki/wiki.cgi/GrADS/script?lang=jp" target="_blank">JAMSTEC小玉さんHP</a><br>
+</li>
+<li>
+<a href="ftp://iges.org/grads/scripts/" target="_blank">GrADS本家scripts</a><br>
+</li>
+</ul>
+
+</li>
+</ul>
+
+<br>
+<br>
+<!-- GMTで描画 -------------------------------------------------->
+<b><u>GMTで描画</u></b>(shとGMTコマンドの合わせ技)</font><br>
+GMTのインストールは<a href="https://sites.google.com/site/unumahp/drawing/gmt/install-gmt" target="_blank"><b>こちら</b></a>
+<br>
+GMTの超基本マニュアルは
+<a href="DEVEL/txt/gmt_manual.html" target="_blank"><b>こちら</b></a>
+<br>
+<br>
+
+(以下のプログラムは、GMT ver.4.5.3 で動作確認しています.)
+<ul>
+<li>
+AMeDASの1時間値を時系列に描く<br>
+gmt_kihon01/gmt_kihon01.sh<br>
+<a href="DEVEL/txt/gmt_kihon01.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+GTOPO30の地形図を描く(2次元)<br>
+gmt_kihon02/gmt_kihon02.sh<br>
+<a href="DEVEL/txt/gmt_kihon02.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+GTOPO30の地形図を描く(3次元)<br>
+gmt_kihon03/gmt_kihon03.sh<br>
+<a href="DEVEL/txt/gmt_kihon03.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<!-- 埋め込みプログラム ------------------------------------------>
+<b><u>FORTRANの埋込み</u></font></b>
+<ul>
+<ul>
+<li>
+FORTRANについてはこちらを参照。
+</li>
+<li>
+FORTRANのコンパイルオプションについてはこちらを参照。
+</li>
+</ul>
+</ul>
+
+<ul>
+<li>
+FORTRAN プログラムをshell scriptに埋め込む [準備中]<br>
+umekomi/shell_fortran.sh<br>
+<a href="DEVEL/txt/shell_fortran.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<ul>
+<li>
+NetCDF <br>
+umekomi/read_netcdf_fortran.sh<br>
+<a href="DEVEL/txt/read_netcdf_fortran.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<ul>
+<li>
+GRIB1 <br>
+umekomi/read_grib1_fortran.sh<br>
+<a href="DEVEL/txt/read_netcdf_fortran.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<ul>
+<li>
+GRIB2 <br>
+umekomi/read_grib2_fortran.sh<br>
+<a href="DEVEL/txt/read_netcdf_fortran.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<ul>
+<li>
+kokunainisin <br>
+umekomi/read_dgrib_fortran.sh<br>
+<a href="DEVEL/txt/read_dgrib_fortran.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<b><u>AWKの埋込み</u></font></b>
+<ul>
+<ul>
+<li>
+AWKについてはこちらを参照。
+</li>
+</ul>
+</ul>
+
+<ul>
+<li>
+AWK プログラムをshell scriptに埋め込む [準備中]<br>
+umekomi/shell_awk.sh<br>
+<a href="DEVEL/txt/shell_awk.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<br>
+<!-- バックアップ用プログラム ------------------------------------>
+<b><u>バックアップ用プログラム</u></b>(オススメ)
+<ul>
+<li>
+rsyncを使って同期をとる(まったく同じデータを作成)<br>
+backup/backup_rsync.sh<br>
+<a href="DEVEL/txt/backup_rsync.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+コピーして, tar で固めて gz で圧縮し, バックアップ<br>
+backup/backup_targz.sh<br>
+<a href="DEVEL/txt/backup_targz.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+<br>
+<br>
+
+
+
+<hr>
+<center>
+<b><font color="#ff0000">!!! ここから下はマニアックな人向けのプログラムです !!! </font></b>
+</center>
+<hr>
+
+<!-- bashrc ----------------------------------------------------->
+<b><u>.bashrc を便利に使う</u></b>
+<ul>
+<li>
+端末の設定ファイルの解説<br>
+DEVEL/txt/bashrc.txt<br>
+<a href="DEVEL/txt/bashrc.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+<br>
+
+
+<!-- データを取得する ------------------------------------------->
+<b><u>FTPサーバからwgetを使ってデータを取得する</u></font></b>
+<ul>
+<li>
+URLを指定して, 好きな日時のデータを取得する [準備中]<br>
+<a href="DEVEL/txt/multi_wget.txt" target="_blank">説明書</a>
+</li>
+</ul>
+<br>
+<br>
+
+<!-- GMTで描画 -------------------------------------------------->
+<b><u>GMTで描画</u></b><br>
+<ul>
+<li>
+動作環境:<br>
+<ul>
+OS: CentOS 5.6, 5.7, 6.0 (x86_64), Scientific Linux 6.0, 6.1 (x86_64)<br>
+Compiler: Intel Compiler ver. 12 (intel64)<br>
+GMT: ver. 4.5.3<br>
+GrADS: ver. 2.0.a9, 2.0.0, 2.0.1 (x86_64版)<br>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+数値モデルの変数を描く [準備中]<br>
+MANIAC/gmt_model/model2gmt.sh<br>
+<a href="DEVEL/txt/model2plot.txt" target="_blank">説明書</a>
+</li>
+
+<ul>
+<li>
+JMA-MSM解析ツール(2006年3月以降):
+<a href="http://shimizus.hustle.ne.jp/wiki/wiki.cgi?action=ATTACH&page=%A5%E2%A5%C7%A5%EB%B4%D8%CF%A2%A5%E1%A5%E2&file=read%5Fmsm%2Etar%2Egz" target="_blank">read_msm.tar.gz(防災科研,清水さんのプログラムを使用)</a>
+</li>
+<li>
+JMA-GSM解析ツール(2006年11月以降):
+<a href="http://shimizus.hustle.ne.jp/wiki/wiki.cgi?action=ATTACH&page=%A5%E2%A5%C7%A5%EB%B4%D8%CF%A2%A5%E1%A5%E2&file=read%5Fgsm%2Etar%2Egz" target="_blank">read_gsm.tar.gz(防災科研,清水さんのプログラムを使用)</a>
+</li>
+</ul>
+<br>
+
+<li>
+JMA-MSM解析ツール(2006年3月以降):<br>
+MANIAC/model_analysis/msm_grib22bin.sh
+<a href="DEVEL/txt/msm_grib22bin.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+JMA-MSM描画ツール(2006年3月以降):<br>
+MANIAC/model_analysis/msmg2_bin2gmt.sh<br>
+<a href="DEVEL/txt/msmg2_bin2gmt.txt" target="_blank">説明書</a><br>
+<b>[重要]</b>使用時は、上記の msm_grib22bin.sh を併用します。
+</li>
+<br>
+
+<li>
+全国合成レーダーを描く(2005年6月以降):<br>
+MANIAC/gmt_radar/radar2gmt.sh<br>
+<a href="DEVEL/txt/radar2gmt.txt" target="_blank">説明書</a><br>
+</li>
+<ul>
+<li>
+全国合成レーダー用ツール: <a href="http://shimizus.hustle.ne.jp/wiki/wiki.cgi?action=ATTACH&page=%A5%EC%A1%BC%A5%C0%B4%D8%CF%A2%A5%E1%A5%E2&file=read%5Fjmaradar%2Etar%2Ez" target="_blank">read_jmaradar.tar.z(防災科研,清水さんのプログラムを使用)</a><br>
+</li>
+</ul>
+<br>
+
+<li>
+レーダー・アメダス解析雨量を描く [準備中]<br>
+MANIAC/gmt_radar-amedas/radar-amedas2gmt.sh<br>
+<a href="DEVEL/txt/radar-amedas2plot.txt" target="_blank">説明書</a><br>
+</li>
+<ul>
+<li>
+レーダー・アメダス解析雨量用ツール:
+<a href="http://shimizus.hustle.ne.jp/wiki/wiki.cgi?action=ATTACH&page=%A5%EC%A1%BC%A5%C0%B4%D8%CF%A2%A5%E1%A5%E2&file=read%5Fradar%5Famedas%2Etar%2Egz"
+   target="_blank">read_radar_amedas.tar.gz(防災科研,清水さんのプログラムを使用)</a>
+</li>
+</ul>
+<br>
+
+<li>
+WINDASの生データをテキストデータに変換するプログラム<br>
+MANIAC/gmt_windas/windas2txt.sh<br>
+<a href="DEVEL/txt/windas2txt.txt" target="_blank">説明書</a><br>
+</li>
+<br>
+<li>
+WINDASの時系列を描く<br>
+MANIAC/gmt_windas/windastxt2gmt.sh<br>
+<a href="DEVEL/txt/windastxt2gmt.txt" target="_blank">説明書</a><br>
+<font color="#ff0000"><b>[重要]</b></font>実行時には、上記の windas2txt.sh を併用します。
+</li>
+<br>
+
+<li>
+パイロットバルーンの航跡図を描く(2D) [準備中]<br>
+MANIAC/gmt_paibal/paibal2plot_2d.sh<br>
+<a href="DEVEL/txt/paibal2plot_2d.txt" target="_blank">説明書</a><br>
+</li>
+<br>
+
+<li>
+パイロットバルーンの航跡図を描く(3D) [準備中]<br>
+MANIAC/gmt_paibal/paibal2plot_3d.sh<br>
+<a href="DEVEL/txt/paibal2plot_3d.txt" target="_blank">説明書</a><br>
+</li>
+<br>
+
+</ul>
+<br>
+<br>
+
+<!-- アニメーションGIF ------------------------------------------>
+<b><u>アニメーションGIFを作る</u></font></b>
+<ul>
+<li>
+アニメーションGIFを作成する<br>
+MANIAC/gif_anime01/gif_anime01.sh<br>
+<a href="DEVEL/txt/gif_anime01.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+2つの画像を時系列で比較出来るアニメーションGIFを作成する<br>
+MANIAC/gif_anime02/gif_anime02.sh<br>
+<a href="DEVEL/txt/gif_anime02.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<br>
+<!-- 時系列画像を作る ------------------------------------------>
+<b><u>時系列画像を作る</u></font></b>
+<ul>
+<li>
+既存の画像から任意の範囲を切り取った画像を作成する<br>
+MANIAC/picture_tool/crop_picture.sh<br>
+<a href="DEVEL/txt/crop_picture.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+crop_picture.sh で作成した画像を時系列に並べた図を作成する<br>
+MANIAC/picture_tool/append_picture.sh<br>
+<a href="DEVEL/txt/append_picture.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+透過PNGを作成する<br>
+MANIAC/picture_tool/png_transparent.sh<br>
+<a href="DEVEL/txt/gif_anime01.txt" target="_blank">説明書</a>
+</li>
+<br>
+</ul>
+
+
+<br>
+<!-- クラスターツール ------------------------------------------->
+<b><u>クラスターツール</u></font></b>
+<ul>
+<li>
+複数マシン, 複数CPUコアを使用し, rshを用いた通信を介して同時処理を行う
+<br>
+(スタンドアロンのWorkstationでも使用可能)<br>
+MANIAC/cluster/multi_calc.sh<br>
+<a href="DEVEL/txt/multi_calc.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+全てのクラスターノードにおいて実行中のJOBの確認をする<br>
+MANIAC/cluster/check.sh<br>
+<a href="DEVEL/txt/check.txt" target="_blank">説明書</a>
+</li>
+<br>
+
+<li>
+全てのクラスターノードにおいて実行中のJOBを止める<br>
+MANIAC/cluster/killjob.sh<br>
+<a href="DEVEL/txt/killjob.txt" target="_blank">説明書</a>
+</li>
+</ul>
+<br>
+<br>
+
+
+<br>
+<b>参考文献(URL)</b> (アルファベット順)<br>
+
+<ul>
+<li>
+GMT 本家<a href="http://gmt.soest.hawaii.edu/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+GrADS の Docs<a href="http://www.iges.org/grads/gadoc/gadocindex.html" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+GrADS用「私」作ユーティリティ<a href="http://mc39.genin.jp/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+早崎 将光 氏の<a href="http://higu.cr.chiba-u.jp/~hayasaki/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+加藤 雅也 氏の<a href="http://www.rain.hyarc.nagoya-u.ac.jp/~kato/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+KDO 氏の<a href="http://homepage1.nifty.com/~kdo/gmt00_index.html" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+小玉 知央 氏の<a href="http://kodama.fubuki.info/wiki/wiki.cgi?lang=jp" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+黒崎 泰典 氏の<a href="http://higu.cr.chiba-u.jp/~ykurosak/index.html" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+長崎大学海洋物理学研究室掲示板<a href="https://sites.google.com/site/infoaofd/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+NOAA の<a href="http://www.noaa.gov/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+大竹 秀明 氏の<a href="http://homepage2.nifty.com/ohtake-HP/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+清水 慎吾 氏の<a href="http://shimizus.hustle.ne.jp/wiki/wiki.cgi" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+辻野 智紀 氏の<a href="http://www.rain.hyarc.nagoya-u.ac.jp/~satoki/main/index.html" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+東北大学大学院理学研究科 流体地球物理学講座<a href="http://wind.gp.tohoku.ac.jp/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+山下 哲典, 2010: 
+UNIX シェルスクリプトコマンドブック(第2版), 
+ソフトバンククリエイティブ株式会社, 464pp.
+</li>
+</ul>
+<ul>
+<li>
+安形 康 氏の<a href="http://hydro.iis.u-tokyo.ac.jp/~agata/indexj.html" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<ul>
+<li>
+吉村 圭 氏の<a href="http://hydro.iis.u-tokyo.ac.jp/~kei/" target="_blank">HOME PAGE</a>
+</li>
+</ul>
+<br>
+
+
+<b>謝辞</b><br>
+<ul>
+<li>
+本プログラムの一部には、Fortran ライブラリ STPK を用いています。
+作成者の 辻野 智紀 氏(現：名古屋大学)に感謝の意を示します。
+gradsdraw.sh 内の一部は、山崎 哲 氏(現：九州大学)からプログラムの提供を受けました。ここに感謝の意を示します。
+</li>
+</ul>
+
+<hr>
+<i>Producted by Takashi Unuma, Kochi Univ.</i>
+</font>
